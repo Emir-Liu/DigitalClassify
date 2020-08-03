@@ -49,7 +49,7 @@ def load_data_wrapper():
     validation_data = zip(validation_inputs, va_d[1])
     test_inputs = [np.reshape(x, (784, 1)) for x in te_d[0]]
     test_data = zip(test_inputs, te_d[1])
-    return (training_data, validation_data, test_data)
+    return (list(training_data), list(validation_data), list(test_data))
 
 def vectorized_result(j):
     '''
